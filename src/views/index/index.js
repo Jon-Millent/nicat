@@ -1,15 +1,2 @@
-export default{
-  name: 'index',
-  data(){
-    return {
-      config: {
-        navIndex: 1
-      }
-    }
-  },
-  mounted(){
+import template from './template.html'
 
-    // TO DO
-
-  }
-}
