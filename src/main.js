@@ -1,5 +1,0 @@
-class Apple{
-
-}
-
-new Apple()

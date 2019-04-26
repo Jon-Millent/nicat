@@ -1,25 +1,16 @@
+
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const path = require('path')
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: 'production',
-  entry: {
-    main: './src/main.js'
-  },
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-  },
-  module: {
-    rules: [
-
+    mode: 'production',
+    entry: {
+        main: './src/app.js'
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './index.html'
+        }),
+        new CleanWebpackPlugin()
     ],
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: 'index.html', // 配置输出文件名和路径
-      template: 'index.html', // 配置文件模板
-    })
-  ]
 }
