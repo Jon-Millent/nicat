@@ -1,15 +1,13 @@
-import { NiCatRouter } from '../core'
 
-import IndexPage from '../views/index'
+const path = require('path');
 
-export default new NiCatRouter({
-
-    routes: [
-        {
-            path: '/',
-            name: '首页',
-            component: IndexPage
-        }
-    ]
-
-})
+module.exports = [
+    {
+        path: path.join(__dirname, '../views/index/'),
+        name: 'index',
+    },
+    {
+        path: path.join(__dirname, '../views/about/'),
+        name: 'about',
+    }
+]
